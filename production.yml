@@ -6,3 +6,5 @@
   roles:
     - git
     - ruby
+    - rails
+    - mysql
