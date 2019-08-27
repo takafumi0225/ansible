@@ -9,6 +9,7 @@
 
 - name: gem install rails -v {{ rails_version }}
   command: gem install rails -v {{ rails_version }}
+  become: yes
   when: rails_installed.stdout != rails_version
   tags:
     - rails
