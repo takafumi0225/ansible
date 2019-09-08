@@ -8,3 +8,5 @@
     - ruby
     - rails
     - mysql
+    - nginx
+    - nodejs
