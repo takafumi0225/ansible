@@ -8,8 +8,12 @@
     - install
 
 - name: gem install rails -v {{ rails_version }}
-  command: gem install rails -v {{ rails_version }}
+  command: bash -lc "gem install {{ item }}"
   when: rails_installed.stdout != rails_version
+  with_items:
+    - rbenv-rehash
+    - bundler -v {{ bundler_version }}
+    - rails
   tags:
     - rails
     - install
