@@ -1,0 +1,6 @@
+- name: git clone https://github.com/takafumi0225/{{ application_name }}.git
+  git:
+    repo: https://github.com/takafumi0225/{{ application_name }}.git
+    dest: /home/ec2-user/test/
+  tags:
+    - application
